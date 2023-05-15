@@ -38,7 +38,7 @@ const WordCounter = () => {
       .map(([word, frequency]) => `"${word}",${frequency}`)
       .join('\n');
     const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8;' });
-    saveAs(blob, 'word_frequency.csv');
+    saveAs(blob, 'Histogram_data.csv');
   };
 
   const chartData = wordFrequency && Object.entries(wordFrequency).map(([word, frequency]) => ({ word, frequency }));
