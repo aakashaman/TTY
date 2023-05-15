@@ -7,6 +7,8 @@ https://tty-gamma.vercel.app/
 
 This project uses the following libraries:
 
+Node JS
+
 React
 
 file-saver
