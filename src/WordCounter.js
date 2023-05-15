@@ -52,7 +52,7 @@ const WordCounter = () => {
       {chartData && (
         <div>
          
-          <BarChart width={1500} height={500} barSize={30} data={chartData}>
+          <BarChart width={1500} height={400} barSize={30} data={chartData}>
             <XAxis dataKey="word" />
             <YAxis />
             <Tooltip />
