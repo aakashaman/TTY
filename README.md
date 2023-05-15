@@ -1,69 +1,33 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deployment Link
 
-## Available Scripts
+https://tty-gamma.vercel.app/
 
-In the project directory, you can run:
+## Libraries Used
 
+This project uses the following libraries:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+file-saver
 
-### `npm test`
+recharts
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Main Components
 
-### `npm run build`
+# WordCounter.js
+The component initializes two states using the useState hook: data and wordFrequency. The data state is used to store the raw text data fetched from the URL, and the wordFrequency state is used to store the frequency count of each word in the text.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The handleSubmit function that fetches the text data from the URL and updates the data state. It then calculates the frequency count of each word in the text by splitting the text into an array of words using a regular expression, and then looping through the array and incrementing a counter for each word.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+It then sorts the frequency count in descending order, selects the top 20 most frequent words, and updates the wordFrequency state with an object that maps each word to its frequency count.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The handleExport function that exports the wordFrequency data as a CSV file using the file-saver library. It converts the object to a string of CSV data by mapping over its entries and joining them with newline characters, and then creates a Blob object with the data and a MIME type of text/csv;charset=utf-8. Finally, it calls the saveAs function from the file-saver library to prompt the user to save the file with a name of "word_frequency.csv".
 
-### `npm run eject`
+The renders a form with a submit button, and a chart and export button if wordFrequency data is available. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The chart is a BarChart from the recharts library that displays the frequency count of each word as a bar chart.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The export button calls the handleExport function when clicked. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The component also applies some CSS styling using a module CSS file.
