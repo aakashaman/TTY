@@ -1,12 +1,19 @@
-# Getting Started with Create React App
+## Project Link
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://tty-gamma.vercel.app/
 
-## Available Scripts
+## Libraries Used
 
-In the project directory, you can run:
+This project uses the following libraries:
 
-### `npm start`
+React
+
+file-saver
+
+recharts
+
+
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
