@@ -15,7 +15,7 @@ recharts
 
 ## Main Components
 
-# WordCounter.js
+### WordCounter.js
 The component initializes two states using the useState hook: data and wordFrequency. The data state is used to store the raw text data fetched from the URL, and the wordFrequency state is used to store the frequency count of each word in the text.
 
 The handleSubmit function that fetches the text data from the URL and updates the data state. It then calculates the frequency count of each word in the text by splitting the text into an array of words using a regular expression, and then looping through the array and incrementing a counter for each word.
@@ -31,3 +31,15 @@ The chart is a BarChart from the recharts library that displays the frequency co
 The export button calls the handleExport function when clicked. 
 
 The component also applies some CSS styling using a module CSS file.
+
+## Installation
+
+Clone the repository.
+
+Install the dependencies using `npm install`.
+
+Run the application using `npm start`.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
